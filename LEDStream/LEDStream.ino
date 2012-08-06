@@ -1,9 +1,15 @@
+/*
+ * A 'fork' of the adalight code, with a nice case statement.
+ *
+ * Tested with the LPD6803 50 led string
+ * should work with the WS2801 as well
+ */
 #include "FastSPI_LED.h"
 
 #define NUM_LEDS 50
 /*
- * pin 11 -> blue
- * pin 13 -> green
+ * pin 11 -> blue  for the LPD6803 'yellow' for the WS2801 string
+ * pin 13 -> green for the LPD6803 'green' for the WS2801 string
  */
 
 
@@ -40,6 +46,10 @@ void setup()
 
   //Change this to match your led strip
   FastSPI_LED.setChipset(CFastSPI_LED::SPI_LPD6803);
+  //FastSPI_LED.setChipset(CFastSPI_LED::SPI_TM1809);
+  //FastSPI_LED.setChipset(CFastSPI_LED::SPI_HL1606);
+  //FastSPI_LED.setChipset(CFastSPI_LED::SPI_595);
+  //FastSPI_LED.setChipset(CFastSPI_LED::SPI_WS2801);
 
   FastSPI_LED.setPin(PIN);
   //Change datarate to match your led strip as well

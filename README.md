@@ -15,3 +15,4 @@ FastSPI_LED.setDataRate(3);
 
 But this is already in the LEDStream code ;-)
 
+Next stop add support for: WS2812B
